@@ -21,8 +21,9 @@ public class Gate1 : MonoBehaviour
         PlayerController inventory = other.gameObject.GetComponent<PlayerController>();
         if (other.gameObject.tag == "Player")
         {
-            if(inventory.keyCount == 1)
+            if(inventory.keyCount >= 1)
             {
+                inventory.keyCount--;
                 Destroy(gameObject);
             }
         }

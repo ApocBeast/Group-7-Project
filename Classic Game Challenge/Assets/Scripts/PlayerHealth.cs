@@ -16,7 +16,15 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (health > 0)
+        {
+            health -= Time.deltaTime;
+        }
+
+        else if (health <= 0)
+        {
+            health = 0;
+        }
     }
 
     public void UpdateHealth(float mod)
@@ -28,9 +36,5 @@ public class PlayerHealth : MonoBehaviour
         {
             health = maxHealth;
         } 
-        else if (health <= 0)
-        {
-            health = 0;
-        }
     }
 }
