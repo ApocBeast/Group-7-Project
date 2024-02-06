@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Key
   - Gate
+  - Chest
   layers:
   - Default
   - TransparentFX

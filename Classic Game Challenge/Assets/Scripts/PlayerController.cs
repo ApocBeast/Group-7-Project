@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,7 +9,12 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rigi;
     public Animator ani;
     Vector2 playerMovement;
+
+
     public int keyCount = 0;
+
+    public int score; 
+    public TextMeshProUGUI scoreText;
 
 
     // Start is called before the first frame update
@@ -42,5 +48,16 @@ public class PlayerController : MonoBehaviour
         {
             keyCount++;
         }
+
+        if(other.gameObject.tag == "Chest")
+        {
+            UpdateScore();
+        }
+    }
+
+    private void UpdateScore()
+    {
+        score += 1000;
+        scoreText.text = score.ToString();
     }
 }
