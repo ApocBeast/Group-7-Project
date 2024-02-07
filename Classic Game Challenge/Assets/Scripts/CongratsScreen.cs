@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Level2 : MonoBehaviour
+public class CongratsScreen : MonoBehaviour
 {
     void OnCollisionEnter2D(Collision2D other)
     {
-        SceneManager.LoadScene("Level 2");
+        SceneManager.LoadScene("Win Screen");
     }
 }
