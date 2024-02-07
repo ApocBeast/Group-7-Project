@@ -7,6 +7,9 @@ public class CongratsScreen : MonoBehaviour
 {
     void OnCollisionEnter2D(Collision2D other)
     {
-        SceneManager.LoadScene("Win Screen");
+        if (other.gameObject.tag == "Player")
+        {
+            SceneManager.LoadScene("Win Screen");
+        }
     }
 }
