@@ -10,36 +10,31 @@ public class PlayerHealth : MonoBehaviour
 
     public TextMeshProUGUI healthText;
 
-    // Start is called before the first frame update
-    void Start()
-    {   
-        health = maxHealth;        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        if (health > 0)
+        if(HealthScore.playerTotalHealth > 0)
         {
-            health -= Time.deltaTime;
+            HealthScore.playerTotalHealth -= Time.deltaTime;
         }
 
-        else if (health <= 0)
+        else if (HealthScore.playerTotalHealth <= 0)
         {
-            health = 0;
+            HealthScore.playerTotalHealth = 0;
+            Destroy(gameObject);
         }
 
-        healthText.text = health.ToString(); 
+        healthText.text = HealthScore.playerTotalHealth.ToString(); 
     }
 
     public void UpdateHealth(float mod)
     {
         // Updating health
-        health += mod; 
+        HealthScore.playerTotalHealth += mod; 
 
-        if (health > maxHealth)
+        if (HealthScore.playerTotalHealth > maxHealth)
         {
-            health = maxHealth;
+            HealthScore.playerTotalHealth = maxHealth;
         }
 
         

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,17 +11,9 @@ public class Projectile : MonoBehaviour
         rigi = GetComponent<Rigidbody2D>();
     }
     
-    public void Launch(Vector2 direction, float force)
+    public void ThrowSword(Vector2 direction, float force)
     {
         rigi.AddForce(direction * (force * 2));
-    }
-    
-    void Update()
-    {
-        if(transform.position.magnitude > 1000.0f)
-        {
-            Destroy(gameObject);
-        }
     }
     
     void OnCollisionEnter2D(Collision2D other)

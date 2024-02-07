@@ -13,19 +13,11 @@ public class PlayerController : MonoBehaviour
 
     public int keyCount = 0;
 
-    public int score; 
     public TextMeshProUGUI scoreText;
 
     public GameObject projectilePrefab;
     Vector2 lookDirection = new Vector2(1,0);
 
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -47,8 +39,10 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0))
         {
-            Launch();
+            ThrowSword();
         }
+
+        scoreText.text = HealthScore.playerTotalScore.ToString();
     }
 
     void FixedUpdate()
@@ -72,16 +66,15 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateScore()
     {
-        score += 1000;
-        scoreText.text = score.ToString();
+        HealthScore.playerTotalScore += 1000;
     }
 
-    void Launch()
+    void ThrowSword()
     {
         GameObject projectileObject = Instantiate(projectilePrefab, rigi.position + Vector2.up * 0.5f, Quaternion.identity);
 
-        Projectile projectile = projectileObject.GetComponent<Projectile>();
-        projectile.Launch(lookDirection, 300);
+        Projectile sword = projectileObject.GetComponent<Projectile>();
+        sword.ThrowSword(lookDirection, 300);
     }
 }
 
