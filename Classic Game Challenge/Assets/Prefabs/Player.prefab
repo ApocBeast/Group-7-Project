@@ -126,6 +126,9 @@ MonoBehaviour:
   rigi: {fileID: 5259026046596603172}
   ani: {fileID: 5259026046596603177}
   keyCount: 0
+  score: 0
+  scoreText: {fileID: 0}
+  projectilePrefab: {fileID: 0}
 --- !u!114 &5259026046596603170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 2000
+  healthText: {fileID: 0}
 --- !u!61 &5259026046596603173
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -16,6 +16,10 @@ public class PlayerController : MonoBehaviour
     public int score; 
     public TextMeshProUGUI scoreText;
 
+    public GameObject projectilePrefab;
+    Vector2 lookDirection = new Vector2(1,0);
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +38,17 @@ public class PlayerController : MonoBehaviour
         ani.SetFloat("Horizontal", playerMovement.x);
         ani.SetFloat("Vertical", playerMovement.y);
         ani.SetFloat("Speed", playerMovement.sqrMagnitude);
+
+        if(!Mathf.Approximately(playerMovement.x, 0.0f) || !Mathf.Approximately(playerMovement.y, 0.0f))
+        {
+            lookDirection.Set(playerMovement.x, playerMovement.y);
+            lookDirection.Normalize();
+        }
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            Launch();
+        }
     }
 
     void FixedUpdate()
@@ -60,4 +75,13 @@ public class PlayerController : MonoBehaviour
         score += 1000;
         scoreText.text = score.ToString();
     }
+
+    void Launch()
+    {
+        GameObject projectileObject = Instantiate(projectilePrefab, rigi.position + Vector2.up * 0.5f, Quaternion.identity);
+
+        Projectile projectile = projectileObject.GetComponent<Projectile>();
+        projectile.Launch(lookDirection, 300);
+    }
 }
+
