@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Key : MonoBehaviour
+
 {
+  public AudioSource audioplayer; 
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,7 @@ public class Key : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            audioplayer.Play();
             Destroy(gameObject);
         }
     }

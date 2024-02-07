@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public Animator ani;
     Vector2 playerMovement;
 
+    public AudioSource audioplayer;
 
     public int keyCount = 0;
 
@@ -76,5 +77,14 @@ public class PlayerController : MonoBehaviour
         Projectile sword = projectileObject.GetComponent<Projectile>();
         sword.ThrowSword(lookDirection, 300);
     }
+
+    //Sound
+    public void OncollisionEnter(Collision2D collision){
+
+        if(collision.gameObject.tag == "Key"){
+            audioplayer.Play();
+        }
+    }
+
 }
 
