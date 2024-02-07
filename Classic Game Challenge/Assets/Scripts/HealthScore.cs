@@ -5,5 +5,5 @@ using UnityEngine;
 public class HealthScore : MonoBehaviour
 {
     public static int playerTotalScore = 0; 
-    public static float playerTotalHealth = 2000;
+    public static float playerTotalHealth = 500;
 }
