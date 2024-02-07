@@ -11,6 +11,17 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void GoBackToMain()
+    {
+        Debug.Log("what is going on");
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void CreditScene()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
     // This function will make it so if you press the quit button, the application will close
     public void QuitButton()
     {
