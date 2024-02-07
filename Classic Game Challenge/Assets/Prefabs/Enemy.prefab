@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2614306802929617815}
   m_Layer: 9
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Duck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 50
+  collectedClip: {fileID: 8300000, guid: 73e5c13ef11053f4fa51fe74298f79ee, type: 3}
   moveSpeed: 2
 --- !u!95 &2614306802929617815
 Animator:

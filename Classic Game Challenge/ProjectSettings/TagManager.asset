@@ -8,6 +8,8 @@ TagManager:
   - Gate
   - Chest
   - Sword
+  - Orange
+  - Duck
   layers:
   - Default
   - TransparentFX

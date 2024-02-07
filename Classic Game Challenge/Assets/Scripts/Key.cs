@@ -5,28 +5,19 @@ using UnityEngine;
 
 public class Key : MonoBehaviour
 
-{
-    public AudioSource audioplayer; 
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+{ 
+    public AudioClip collectedClip;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        PlayerController controller = other.GetComponent<PlayerController>();
+
+        if (controller != null)
         {
-            //audioplayer.Play();
+            controller.keySound();
             Destroy(gameObject);
+            
+            controller.PlaySound(collectedClip);
+            
         }
     }
 }

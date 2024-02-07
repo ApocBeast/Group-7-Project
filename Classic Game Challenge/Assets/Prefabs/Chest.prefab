@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 837625825153476996}
   - component: {fileID: 2807459271299266040}
   - component: {fileID: 601495667404823574}
-  - component: {fileID: -160901943772229900}
   - component: {fileID: 2786903888572490147}
   m_Layer: 0
   m_Name: Chest
@@ -113,19 +112,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.73623276, y: 0.5842607}
   m_EdgeRadius: 0
---- !u!114 &-160901943772229900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4798063843029108477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feadc64d16eef48469f7e8fedc16bf13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioplayer: {fileID: 0}
 --- !u!114 &2786903888572490147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,4 +124,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feadc64d16eef48469f7e8fedc16bf13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioplayer: {fileID: 0}
+  collectedClip: {fileID: 8300000, guid: 804da09d7ea8cda45913e50c54780056, type: 3}

@@ -3,14 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Chest : MonoBehaviour
-{
-    public AudioClip chestSound; 
+{ 
+    public AudioClip collectedClip;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        PlayerController controller = other.GetComponent<PlayerController>();
+        //if (other.gameObject.tag == "Player")
+        //{
+        //    chestSound();
+        //    Destroy(gameObject);
+        //}
+        if (controller != null)
         {
-            //PlayerController.chestSound();
+            controller.chestSound();
             Destroy(gameObject);
+            
+            controller.PlaySound(collectedClip);
+            
         }
     }
 }

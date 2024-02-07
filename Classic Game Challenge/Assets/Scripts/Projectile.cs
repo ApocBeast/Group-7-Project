@@ -5,6 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     Rigidbody2D rigi;
+    public AudioClip collectedClip;
     
     void Awake()
     {

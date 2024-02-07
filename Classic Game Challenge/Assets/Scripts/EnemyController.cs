@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float attackDamage = 50f;
 
     private Transform target;
+    public AudioClip collectedClip;
     public float moveSpeed = 2f;
 
 

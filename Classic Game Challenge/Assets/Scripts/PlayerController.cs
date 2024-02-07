@@ -11,8 +11,11 @@ public class PlayerController : MonoBehaviour
     public Animator ani;
     Vector2 playerMovement;
 
-    //public AudioSource audioplayer;
-    //public AudioClip chestClip;
+    public AudioSource audioplayer;
+    public AudioClip chestClip;
+    public AudioClip keyClip;
+    public AudioClip healClip;
+    public AudioClip quackClip;
 
     public int keyCount = 0;
 
@@ -20,6 +23,11 @@ public class PlayerController : MonoBehaviour
 
     public GameObject projectilePrefab;
     Vector2 lookDirection = new Vector2(1,0);
+
+    //void Start()
+    //{
+        //audioplayer = GetComponent<AudioSource>();
+    //}
 
     // Update is called once per frame
     void Update()
@@ -64,6 +72,19 @@ public class PlayerController : MonoBehaviour
         {
             UpdateScore();
         }
+        
+        if(other.gameObject.tag == "Orange")
+        {
+            healSound();
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if(other.gameObject.tag == "Duck")
+        {
+            quackSound();
+        }
     }
 
     private void UpdateScore()
@@ -88,14 +109,28 @@ public class PlayerController : MonoBehaviour
         //}
     //}
 
-    //public void PlaySound(AudioClip clip)
-    //{
-    //    audioplayer.PlayOneShot(clip);
-    //}
-    //public void chestSound()
-    //{
-//        PlaySound(chestClip);
-    //}
+    public void PlaySound(AudioClip clip)
+    {
+        audioplayer.PlayOneShot(clip);
+    }
+    public void chestSound()
+    {
+        PlaySound(chestClip);
+    }
 
+    public void keySound()
+    {
+        PlaySound(keyClip);
+    }
+
+    public void healSound()
+    {
+        PlaySound(healClip);
+    }
+
+    public void quackSound()
+    {
+        PlaySound(quackClip);
+    }
 }
 
