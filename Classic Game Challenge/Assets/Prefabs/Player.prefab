@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5259026046596603174}
   - component: {fileID: 5259026046596603177}
   - component: {fileID: 5259026046596603171}
+  - component: {fileID: 6088916947639388150}
   - component: {fileID: 5259026046596603170}
   - component: {fileID: 5259026046596603173}
   - component: {fileID: 5259026046596603172}
@@ -125,10 +126,22 @@ MonoBehaviour:
   moveSpeed: 5
   rigi: {fileID: 5259026046596603172}
   ani: {fileID: 5259026046596603177}
+  audioplayer: {fileID: 0}
   keyCount: 0
-  score: 0
   scoreText: {fileID: 0}
   projectilePrefab: {fileID: 0}
+--- !u!114 &6088916947639388150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5259026046596603176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfbbe785c35b6ee4f91b4e2e25a06578, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5259026046596603170
 MonoBehaviour:
   m_ObjectHideFlags: 0

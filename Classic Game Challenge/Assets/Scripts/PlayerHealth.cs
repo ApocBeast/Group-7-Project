@@ -26,7 +26,7 @@ public class PlayerHealth : MonoBehaviour
             SceneManager.LoadScene("Game Over");
         }
 
-        healthText.text = HealthScore.playerTotalHealth.ToString(); 
+        healthText.text = HealthScore.playerTotalHealth.ToString("0"); 
     }
 
     public void UpdateHealth(float mod)

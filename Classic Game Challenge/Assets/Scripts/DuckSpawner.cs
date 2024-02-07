@@ -7,7 +7,7 @@ public class DuckSpawner : MonoBehaviour
     public GameObject duckPrefab;
 
     [SerializeField] private float duckSpawnTimer = 7f;
-    [SerializeField] private float attackDamage = 50f;
+    //[SerializeField] private float attackDamage = 50f;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +36,7 @@ public class DuckSpawner : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<PlayerHealth>().UpdateHealth(-attackDamage);
+            //other.gameObject.GetComponent<PlayerHealth>().UpdateHealth(-attackDamage);
             Destroy(gameObject);
         }   
 

@@ -9,6 +9,8 @@ public class MainMenu : MonoBehaviour
     public void PlayButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        HealthScore.playerTotalHealth = 500;
+        HealthScore.playerTotalScore = 0;
     }
 
     public void GoBackToMain()

@@ -25,7 +25,7 @@ public class Key : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            audioplayer.Play();
+            //audioplayer.Play();
             Destroy(gameObject);
         }
     }

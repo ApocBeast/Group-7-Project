@@ -7,6 +7,9 @@ public class Level2 : MonoBehaviour
 {
     void OnCollisionEnter2D(Collision2D other)
     {
-        SceneManager.LoadScene("Level 2");
+        if (other.gameObject.tag == "Player")
+        {
+            SceneManager.LoadScene("Level 2");
+        }
     }
 }

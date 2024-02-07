@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using TMPro;
 
@@ -10,7 +11,8 @@ public class PlayerController : MonoBehaviour
     public Animator ani;
     Vector2 playerMovement;
 
-    public AudioSource audioplayer;
+    //public AudioSource audioplayer;
+    //public AudioClip chestClip;
 
     public int keyCount = 0;
 
@@ -18,7 +20,6 @@ public class PlayerController : MonoBehaviour
 
     public GameObject projectilePrefab;
     Vector2 lookDirection = new Vector2(1,0);
-
 
     // Update is called once per frame
     void Update()
@@ -79,12 +80,22 @@ public class PlayerController : MonoBehaviour
     }
 
     //Sound
-    public void OncollisionEnter(Collision2D collision){
+    //public void OncollisionEnter(Collision2D collision){
 
-        if(collision.gameObject.tag == "Key"){
-            audioplayer.Play();
-        }
-    }
+        //if(collision.gameObject.tag == "Key")
+        //{
+        //    audioplayer.PlaySound();
+        //}
+    //}
+
+    //public void PlaySound(AudioClip clip)
+    //{
+    //    audioplayer.PlayOneShot(clip);
+    //}
+    //public void chestSound()
+    //{
+//        PlaySound(chestClip);
+    //}
 
 }
 
